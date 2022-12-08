@@ -1,38 +1,124 @@
-.App {
-  text-align: center;
+.App, button {
+  color: black;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;    
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.movie-card {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: relative;
+  flex-grow: 1;
+  background-color: rgb(152, 197, 197);
+  color: rgb(15, 59, 59);
+  border-radius: 12px;
+  margin: 12px;
+  overflow: hidden;
+  max-width: 300px;
+  height: 200px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
-.App-link {
-  color: #61dafb;
+.movie-list {
+  display: flex;
+  width: 100vw;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+  margin-top: 12px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.movie-img {
+  opacity: 0.9;
+  margin-bottom: -8px;
+  margin-left: -4px;
+  width: 160px;
+  position: relative;
+}
+
+.movie-img img {
+  height: 100%;
+  position: absolute;
+}
+
+.movie-info {
+  padding: 0 4px;
+  background-color: rgb(152, 197, 197);
+  z-index: 1;
+  width: 50%;
+}
+
+.movie-info h3, .movie-info h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.movie-info a {
+  text-decoration: none;
+}
+
+.movie-info a:hover {
+  opacity: 0.5;
+}
+
+.rating-box {
+  position: relative;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.rating-mask {
+  position: absolute;
+  background-color: rgb(152, 197, 197);
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+
+.heart {
+  position: absolute;
+  bottom: 8px;
+  right: 12px;
+}
+
+nav {
+  margin: 12px auto;
+  width: 80%;
+}
+
+button {
+  width: 100px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgb(152, 197, 197);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  margin-right: 24px;
+}
+
+button.pressed {
+  opacity: 0.75;
+}
+
+nav input {
+  margin-top: 24px;
+  width: 50%;
+  padding-left: 12px;
+}
+
+button, nav input {
+  height: 36px;
+  font-size: 16px;
+}
+
+.error {
+  color: red;
+}
+
+.load-more-container {
+  width: 100%;
+  text-align: center;
+  margin: 24px;
 }
