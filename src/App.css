@@ -1,7 +1,8 @@
-.App, button {
+.App,
+button {
   color: black;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;    
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 a {
@@ -15,9 +16,10 @@ a {
   background-color: rgb(152, 197, 197);
   color: rgb(15, 59, 59);
   border-radius: 12px;
-  margin: 12px;
-  overflow: hidden;
+  margin: 12px 24px 12px 0;
   max-width: 300px;
+  min-width: 300px;
+  overflow: hidden;
   height: 200px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
@@ -26,9 +28,16 @@ a {
   display: flex;
   width: 100vw;
   flex-wrap: wrap;
-  width: 80%;
+  width: 90%;
   margin: auto;
   margin-top: 12px;
+}
+
+@media only screen and (min-width: 1024) {
+  nav,
+  .movie-list {
+    width: 80%;
+  }
 }
 
 .movie-img {
@@ -51,7 +60,8 @@ a {
   width: 50%;
 }
 
-.movie-info h3, .movie-info h4 {
+.movie-info h3,
+.movie-info h4 {
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -86,7 +96,7 @@ a {
 
 nav {
   margin: 12px auto;
-  width: 80%;
+  width: 90%;
 }
 
 button {
@@ -108,7 +118,8 @@ nav input {
   padding-left: 12px;
 }
 
-button, nav input {
+button,
+nav input {
   height: 36px;
   font-size: 16px;
 }
